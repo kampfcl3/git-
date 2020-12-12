@@ -1,9 +1,7 @@
 # PowerShell介紹
-```
 [PowerShell](https://docs.microsoft.com/zh-tw/powershell/scripting/overview?view=powershell-7.1) 是跨平台的工作自動化及設定管理架構，由命令列殼層與指令碼語言組成。
 1.以 .NET Common Language Runtime (CLR) 為建置基礎，並接受及傳回 .NET 物件。
 2.不同於大部分的殼層可接受及傳回文字
-```
 ## 輸出是以物件為基礎的
 ```
 不同於傳統的命令列介面，PowerShell Cmdlet 是設計來處理物件。 物件是結構化的資訊，
