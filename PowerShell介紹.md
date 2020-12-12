@@ -47,9 +47,82 @@ ps: 如果您在 PowerShell 中執行圖形應用程式，即會開啟應用程�
 用於管線的標記法類似於其他殼層中所使用的標記法。 乍看之下，PowerShell 中的管線差異可能並不明顯。 雖然您會在畫面上看到文字
 ，但 PowerShell 會在命令之間使用管線來傳送物件 (而非文字)。
 ```
-#### 範例
+#### 範例001
 ```
 例如，如果您使用 Out-Host Cmdlet 強制逐頁顯示另一個命令的輸
 出，則輸出看起來就像畫面上所顯示的一般文字 (分成數頁)：
 ```
 > Get-ChildItem | Out-Host -Paging
+
+Output:
+```
+Directory: /mnt/c/Git/PS-Docs/PowerShell-Docs/reference/7.0/Microsoft.PowerShell.Core
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          05/22/2020    08:30                About
+-----          05/20/2020    14:36           9044 Add-History.md
+-----          05/20/2020    14:36          12227 Clear-History.md
+-----          05/20/2020    14:36           3566 Clear-Host.md
+-----          05/20/2020    14:36          29087 Connect-PSSession.md
+-----          05/20/2020    14:36           5705 Debug-Job.md
+-----          05/20/2020    14:36           3515 Disable-ExperimentalFeature.md
+-----          05/20/2020    14:36          25531 Disable-PSRemoting.md
+-----          05/20/2020    14:36           7852 Disable-PSSessionConfiguration.md
+-----          05/20/2020    14:36          25355 Disconnect-PSSession.md
+-----          05/20/2020    14:36           3491 Enable-ExperimentalFeature.md
+-----          05/20/2020    14:36          13310 Enable-PSRemoting.md
+-----          05/20/2020    14:36           8401 Enable-PSSessionConfiguration.md
+-----          05/20/2020    14:36           9531 Enter-PSHostProcess.md
+...
+<SPACE> next page; <CR> next line; Q quit
+```
+```
+分頁還會降低 CPU 使用率，因為處理控制權會在其已準備好要顯示的完成頁面時移轉給 Out-Host Cmdlet。 
+管線中在它前面的 Cmdlet 會暫停執行，直到輸出的下一個分頁可供使用為止。
+```
+## 管線中的物件
+```
+當您在 PowerShell 中執行 Cmdlet 時，您會看到文字輸出，這是因為在主控台視窗中必須將物件呈現為文字。
+文字輸出可能不會顯示要輸出之物件的所有屬性。
+```
+#### 範例002
+```
+請考慮 Get-Location Cmdlet。 文字輸出是資訊的摘要，並不是由 Get-Location 所傳回之物件的完整呈現。 
+輸出中的標題是由處理序新增的，它會將資料格式化以便在畫面上顯示。
+```
+> Get-Location
+
+Output:
+```
+Path
+----
+C:\
+```
+```
+使用管線將輸出傳送給 Get-Member Cmdlet 時，會顯示 Get-Location 所傳回之物件的相關資訊。
+```
+> Get-Location | Get-Member
+
+Output:
+```
+TypeName: System.Management.Automation.PathInfo
+
+Name         MemberType Definition
+----         ---------- ----------
+Equals       Method     bool Equals(System.Object obj)
+GetHashCode  Method     int GetHashCode()
+GetType      Method     type GetType()
+ToString     Method     string ToString()
+Drive        Property   System.Management.Automation.PSDriveInfo Drive {get;}
+Path         Property   string Path {get;}
+Provider     Property   System.Management.Automation.ProviderInfo Provider {get;}
+ProviderPath Property   string ProviderPath {get;}
+```
+Get-Location 會傳回 PathInfo 物件，其中包含目前的路徑與其他資訊。
+
+## 參考
+```
+https://docs.microsoft.com/zh-tw/powershell/scripting/overview?view=powershell-7.1
+```
+
