@@ -58,7 +58,10 @@ Git的標準提交訊息：
 
 索引的存在可以排除工作目錄裡不必要的檔案提交，還可以只將檔案變更內容的一部分加入索引並提交。
 ```
-
+#### 參考
+```
+https://backlog.com/git-tutorial/tw/intro/intro1_1.html
+```
 
 
 
