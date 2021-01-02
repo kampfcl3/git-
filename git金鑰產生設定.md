@@ -7,3 +7,10 @@
 若沒有這資料夾，也表示你未曾設定過 ssh
 故，請在 git bash 輸入指令
 > ssh-keygen -t rsa -b 4096 -C “your_email@example.com”
+
+
+
+
+## 資料來源
+
+> (使用git將本地庫上傳到遠端倉庫)[https://www.itread01.com/content/1547628496.html]
