@@ -1,5 +1,5 @@
 # git-
-> (git official)[https://git-scm.com/docs]
+> [git official](https://git-scm.com/docs)
 ```
 Git的基本介紹
 
