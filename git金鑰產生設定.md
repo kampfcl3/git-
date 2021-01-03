@@ -13,4 +13,7 @@
 
 ## 資料來源
 
-> (使用git將本地庫上傳到遠端倉庫)[https://www.itread01.com/content/1547628496.html]
+> [MAIN 使用git將本地庫上傳到遠端倉庫](https://www.itread01.com/content/1547628496.html)
+> [MAIN ssh key設定 github](https://medium.com/@eason920/github-%E7%9A%84-ssh-%E5%8D%94%E8%AD%B0%E8%A8%AD%E5%AE%9A-%E4%B8%8A-45f26e4564f6)
+
+> 
