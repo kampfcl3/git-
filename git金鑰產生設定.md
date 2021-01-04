@@ -74,7 +74,7 @@ ps:不要指定成有副檔名的 id_rsa.pub ，會噴錯誤說你在本機開�
 ```
 ps：git是藉由每個版本的"內容差異"去做更新的，所以git是不能管理空資料夾的，也就是說檔案夾了必須有檔案才能add
 ```
-[image](https://github.com/kampfcl3/git-/blob/main/pic/github(git)002.png)  
+![image](https://github.com/kampfcl3/git-/blob/main/pic/github(git)002.png)  
 2.初始化將你想建立本地倉庫的這個目錄變成Git可以管理的倉庫
 > git init  
 資料夾下將多了一個隱藏資料夾.git，這個目錄是Git用來跟蹤管理版本庫的，不要修改
@@ -91,7 +91,7 @@ ps:注意空格
 ```
 "git@github.com:kampfcl3/專案名稱.git"這一段代碼可以在專案的code按鈕中的ssh書籤中找到
 ```
-[image](https://github.com/kampfcl3/git-/blob/main/pic/github(git)001.png)  
+![image](https://github.com/kampfcl3/git-/blob/main/pic/github(git)001.png)  
 
 6.push上傳原生代碼  
 > git push -u origin master    
@@ -99,7 +99,7 @@ ps:注意空格
 origin:遠端
 master:為版本branches(有分主幹跟分枝)
 ```
-[image](https://github.com/kampfcl3/git-/blob/main/pic/github(git)003.png)  
+![image](https://github.com/kampfcl3/git-/blob/main/pic/github(git)003.png)  
 
 #### failed to push some refs to git錯誤
 > 原因:github中的README.md檔案沒有download到原生代碼目錄中
